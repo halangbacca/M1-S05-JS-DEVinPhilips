@@ -5,13 +5,12 @@ export default class Juros {
     this.tempo = tempo;
   }
   calcularJurosSimples() {
-    return `Juros Simples R$: ${
-      this.capitalInicial * this.taxaAplicada * this.tempo
-    }`;
+    let jurosSimples = this.capitalInicial * this.taxaAplicada * this.tempo;
+    return `Juros Simples R$: ${jurosSimples.toFixed(2)}`;
   }
   calcularJurosCompostos() {
-    return `Juros Compostos R$: ${
-      this.capitalInicial * (1 + this.taxaAplicada) ** this.tempo
-    }`;
+    let jurosCompostos =
+      this.capitalInicial * (1 + this.taxaAplicada) ** this.tempo;
+    return `Juros Compostos R$: ${jurosCompostos.toFixed(2)}`;
   }
 }

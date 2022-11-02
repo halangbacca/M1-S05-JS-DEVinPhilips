@@ -4,9 +4,15 @@ export default class Personagem {
     this.percentualVida = percentualVida = 100;
   }
   sofreuDano(percentualDano) {
-    return (this.percentualVida -= percentualDano);
+    this.percentualVida - percentualDano <= 0
+      ? (this.percentualVida = 0)
+      : (this.percentualVida -= percentualDano);
+    return this.percentualVida;
   }
   usouKitMedico() {
-    return (this.percentualVida += 10);
+    this.percentualVida + 10 >= 100
+      ? (this.percentualVida = 10)
+      : (this.percentualVida += 10);
+    return this.percentualVida;
   }
 }
