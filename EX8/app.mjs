@@ -5,7 +5,6 @@ const usuarioA = new Usuario("Halan", "halanbacca@outlook.com", "5553750");
 const cUsuario = document.getElementById("email");
 const cSenha = document.getElementById("senha");
 const bAcessar = document.getElementById("botao-acessar");
-const pMensagem = document.getElementById("p-mensagem");
 
 bAcessar.addEventListener("click", () => {
   const usuario = cUsuario.value;
